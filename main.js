@@ -1,6 +1,8 @@
+const numberButtons = document.querySelectorAll('[data-number]')
+const operatorButtons = document.querySelectorAll('[data-operator]')
+
 const previousCalc = document.getElementById('previousCalc');
 const currentCalc = document.getElementById('currentCalc');
-const calcButtons = document.querySelectorAll('button');
 const undoButton = document.getElementById('undo');
 const allClear = document.getElementById('clear');
 const decimalPoint = document.getElementById('dot');
@@ -8,14 +10,36 @@ const equalSign = document.getElementById('equals');
 
 
 
-// initialValue = 0
-
-// let displayValue = '';
-
 let firstNum = ''
 let secondNum = ''
 let operation = null
-let displayRefresh = false
+let screenRefresh = false
+
+
+
+window.addEventListener('keydown', handleKeyboardInput)
+equalsButton.addEventListener('click', evaluate)
+clearButton.addEventListener('click', clear)
+deleteButton.addEventListener('click', deleteNumber)
+pointButton.addEventListener('click', appendPoint)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 calcButtons.forEach((button) =>
   button.addEventListener('click', () => appendNumber(button.textContent))

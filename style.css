@@ -11,3 +11,38 @@ html {
     background-size:cover;
     background-repeat:no-repeat;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.display {
+    padding: 10px 20px;
+    border: 2px var(--border) solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: var(--screen);
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .upperPart {
+    min-height: 32px;
+    font-size: 20px;
+  }
+  
+  .lowerPart {
+    min-height: 64px;
+    font-size:40px;
+  }

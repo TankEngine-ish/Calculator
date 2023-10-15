@@ -53,11 +53,10 @@ function clear() {
   }
 //   resetting the screen and setting the initial value of the 'current operation screen' to 0.
 
-
 function appendPoint() {
     if (screenRefresh) resetScreen()
     if (currentCalc.textContent === '')
-    currentCalc.textContent = '0'
+            currentCalc.textContent = '0'
     if (currentCalc.textContent.includes('.')) return
     currentCalc.textContent += '.'
   }
@@ -77,14 +76,14 @@ function setOperation(operator) {
     leftOperand = currentCalc.textContent
     operation = operator
     previousCalc.textContent = `${leftOperand} ${operation}`
-    screenRefresh= true
+    screenRefresh = true
   }
 
 
 function evaluate() {
     if (operation === null || screenRefresh) return
     if (operation === '÷' && currentCalc.textContent === '0') {
-      alert("You can't divide by 0!")
+      alert("system32 deleted - well done!")
       return
     }
     rightOperand = currentCalc.textContent
@@ -96,46 +95,58 @@ function evaluate() {
   }
   
 
-
   function roundResult(number) {
     return Math.round(number * 1000) / 1000
   }
 
 
+  function handleKeyboardInput(e) {
+    if (e.key >= 0 && e.key <= 9) appendNumber(e.key)
+    if (e.key === '.') appendPoint()
+    if (e.key === '=' || e.key === 'Enter') evaluate()
+    if (e.key === 'Backspace') deleteNumber()
+    if (e.key === 'Escape') clear()
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
+      setOperation(convertOperator(e.key))
+  }
+  
+  function convertOperator(keyboardOperator) {
+    if (keyboardOperator === '/') return '÷'
+    if (keyboardOperator === '*') return '×'
+    if (keyboardOperator === '-') return '−'
+    if (keyboardOperator === '+') return '+'
+  }
 
-function add (a, b){
-    return leftNum(a) + rightNum(b);
-}
 
-function subtract (a, b){
-    return leftNum(a) - rightNum(b);
-}
-
-function multiply (a, b){
-    return leftNum(a) * rightNum(b);
-}
-
-function divide (a, b) {
-    if (rightNum(b) == 0){
-        return "system32 deleted - well done!";
-    }else {
-        return leftNum(a) / rightNum(b);
+  function add(a, b) {
+    return a + b
+  }
+  
+  function substract(a, b) {
+    return a - b
+  }
+  
+  function multiply(a, b) {
+    return a * b
+  }
+  
+  function divide(a, b) {
+    return a / b
+  }
+  
+  function operate(operator, a, b) {
+    a = Number(a)
+    b = Number(b)
+    switch (operator) {
+      case '+':
+        return add(a, b)
+      case '−':
+        return substract(a, b)
+      case '×':
+        return multiply(a, b)
+      case '÷':
+        return divide(a, b)
+      default:
+        return null
     }
-}
-
-function operate (operator, leftNum, rightNum) {
-    switch(operator){
-        case '+':
-            return add(leftNum, rightNum);
-            break;
-        case '-':
-            return subtract(leftNum, rightNum);
-            break;
-        case '*':
-            return multiply(leftNum, rightNum);
-            break;
-        case '/':
-            return divide(leftNum, rightNum);
-            break;
-    }
-}
+  }

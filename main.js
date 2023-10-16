@@ -83,7 +83,8 @@ function setOperation(operator) {
 function evaluate() {
     if (operation === null || screenRefresh) return
     if (operation === '÷' && currentCalc.textContent === '0') {
-      alert("system32 deleted - well done!")
+      const errorMessage = document.getElementById("error-message");
+      errorMessage.textContent = "system 32 deleted - WELL DONE!";
       return
     }
     rightOperand = currentCalc.textContent

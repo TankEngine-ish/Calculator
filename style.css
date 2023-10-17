@@ -1,52 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Kotta+One&family=Kulim+Park:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
 
 * {
   box-sizing:border-box;
-    margin:0;
-    padding:0;
+  margin:0;
+  padding:0;
 }
 
 html {
-    background: url(./Images/background.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
+  background: url(./Images/background.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
 
-      position: relative;
-      min-height: 100%;
-    }
-
-
+  position: relative;
+  min-height: 100%;
+}
 
 .container {
-
-display: flex;
-align-items: center;
-justify-content: center;
-height: 75vh;
-min-height: 500px;
-padding: 10px;
-margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  min-height: 500px;
+  padding: 10px;
+  margin-top: 50px;
 }
 
 
 .display {
-    padding: 10px 20px;
-    border: 2px var(--border) solid;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    background-color: var(--screen);
-    text-align: right;
-    word-wrap: break-word;
-    word-break: break-all;
+  padding: 10px 20px;
+  border: 2px var(--border) solid;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: var(--screen);
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+  }
+
+  #currentCalc, #previousCalc {
+
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  #error-message {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+
+
   }
   
   .upperPart {
-    min-height: 32px;
-    font-size: 20px;
+  min-height: 32px;
+  font-size: 20px;
   }
   
   .lowerPart {
-    min-height: 64px;
-    font-size:40px;
+  min-height: 64px;
+  font-size:40px;
   }

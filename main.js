@@ -50,6 +50,7 @@ function clear() {
     leftOperand = ''
     rightOperand = ''
     operation = null
+    location.reload(); 
   }
 //   resetting the screen and setting the initial value of the 'current operation screen' to 0.
 

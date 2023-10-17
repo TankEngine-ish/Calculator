@@ -1,62 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
 
+
+:root {
+  --border: #333;
+  /* --calculator: #aaa;
+  --btn: #eee;
+  --btn-hover: #ddd; */
+  /* --btn-active: #ccc;
+  --btn-red: #faa;
+  --btn-red-hover: #e99;
+  --btn-red-active: #d88; */
+  /* --btn-blue: #aaf;
+  --btn-blue-hover: #99e;
+  --btn-blue-active: #88d; */
+}
 
 * {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html {
-  background: url(./Images/background.jpg);
-  background-size:cover;
-  background-repeat:no-repeat;
-
-  position: relative;
-  min-height: 100%;
+background: url(./Images/background.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+position: relative;
+min-height: 100%;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 75vh;
-  min-height: 500px;
-  padding: 10px;
-  margin-top: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 75vh;
+margin-top: 50px;
 }
 
 
 .display {
-  padding: 10px 20px;
-  border: 2px var(--border) solid;
+padding: 10px 20px;
+border: 2px var(--border) solid;
+border-radius: 5px;
+margin-bottom: 20px;
+background-color: var(--screen);
+text-align: right;
+word-wrap: break-word;
+word-break: break-all;
+background-color: lightcoral;
+}
+
+#currentCalc, #previousCalc {
+font-family: 'Orbitron', sans-serif;
+}
+
+.calculator {
+  border: 5px var(--border) solid;
+  border-radius: 15px;
+}
+
+#error-message {
+font-family: 'Comfortaa', sans-serif;
+font-weight: 700;
+font-size: 0.8rem;
+color: rgb(0, 0, 0); /* Set the text color for the error message */
+padding: 5px; /* Add padding to the error message */
+display:flex;
+justify-content:center;
+}
+
+.upperPart {
+min-height: 32px;
+font-size: 20px;
+}
+
+.lowerPart {
+min-height: 64px;
+font-size:40px;
+}
+
+.buttons_layout{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-gap: 10px;
+}
+
+.btn {
+  padding: 9px;
   border-radius: 5px;
-  margin-bottom: 20px;
-  background-color: var(--screen);
-  text-align: right;
-  word-wrap: break-word;
-  word-break: break-all;
-  }
+  font-size: 25px;
+  font-family: 'Bahiana', sans-serif;
+  font-weight:500;
+}
 
-  #currentCalc, #previousCalc {
+.btn:hover {
+  background-color:#99e;
+}
 
-    font-family: 'Orbitron', sans-serif;
-  }
-
-  #error-message {
-  font-family: 'Comfortaa', sans-serif;
-  font-weight: 700;
-
-
-  }
-  
-  .upperPart {
-  min-height: 32px;
-  font-size: 20px;
-  }
-  
-  .lowerPart {
-  min-height: 64px;
-  font-size:40px;
-  }
+.span-1 {
+  grid-column: span 3;
+}

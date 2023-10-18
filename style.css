@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
 
+
+
+
 * {
 box-sizing:border-box;
 margin:0;
@@ -21,6 +24,8 @@ align-items: center;
 justify-content: center;
 height: 75vh;
 margin-top: 50px;
+
+
 }
 
 .display {
@@ -75,8 +80,8 @@ grid-gap: 15px;
 }
 
 .btn {
-padding: 5px;
-border-radius: 6px;
+padding: 9px;
+border-radius: 7px;
 font-size: 25px;
 font-family: 'Bahiana', sans-serif;
 font-weight:500;
@@ -98,7 +103,7 @@ footer {
   justify-content: center;
   margin: 0 auto;
   width: 400px;
-  padding-top: 10px;
+  padding-top: 20px;
   font-family:'Comfortaa', sans-serif;
 }
 

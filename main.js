@@ -62,7 +62,7 @@ function appendPoint() {
     currentCalc.textContent += '.'
   }
 
-//   .includes() method checks if there's a '.' in the current calculation screen and appends it if true.
+//   .includes() method checks if there's a '.' in the current calculation screen and if there is it won't allow for more decimals so we 'return'!
 //    We need a separate function for the dot because it's the only character other than the operands that gets appended to the current calulation screen.
   
 function deleteNumber() {
@@ -103,8 +103,20 @@ function evaluate() {
     return Math.round(number * 1000) / 1000
   }
 
+  function playClickSound() {
+    const clickSound = document.getElementById('clickSound');
+    clickSound.play();
+  }
+
+  document.querySelectorAll('.btn').forEach((button) => {
+    button.addEventListener('click', () => {
+     playClickSound();
+    });
+  });
+
 
   function handleKeyboardInput(e) {
+    playClickSound();
     if (e.key >= 0 && e.key <= 9) appendNumber(e.key)
     if (e.key === '.') appendPoint()
     if (e.key === '=' || e.key === 'Enter') evaluate()

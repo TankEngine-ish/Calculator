@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css"> 
     <link rel="icon" href="./Images/Favi3.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 
 </head>
 
@@ -23,40 +24,37 @@
             <div id="error-message" class="error-message"></div>
         </div>
 
-
         <div class = "buttons_layout">
+
             <button class="btn" onclick="sound()" id="undo">Undo</button>
             <button class="btn span-1" onclick="sound()" id="clear">Clear</button>
-
-            <button class="btn" onclick="sound()" data-number>0</button>
-       
+            <button class="btn" onclick="sound()" data-operator>+</button>
+        
             <button class="btn" onclick="sound()" data-number>1</button>
             <button class="btn" onclick="sound()" data-number>2</button>
             <button class="btn" onclick="sound()" data-number>3</button>
             <button class="btn" onclick="sound()" data-number>4</button>
+            <button class="btn" onclick="sound()" data-operator>-</button>
+
             <button class="btn" onclick="sound()" data-number>5</button>
             <button class="btn" onclick="sound()" data-number>6</button>
             <button class="btn" onclick="sound()" data-number>7</button>
-            <button class="btn" onclick="sound()" data-number>8</button>
+            <button class="btn" onclick="sound()" data-number>8</button> 
+            <button class="btn" onclick="sound()" data-operator>x</button>
             <button class="btn" onclick="sound()" data-number>9</button>
             
-            <button class="btn" onclick="sound()" id="dot">.</button>
+            <button class="btn" onclick="sound()" data-number>0</button>
             <button class="btn" onclick="sound()" id="equals">=</button>
-
-            <button class="btn" onclick="sound()" data-operator>+</button>
-            <button class="btn" onclick="sound()" data-operator>-</button>
-            <button class="btn" onclick="sound()" data-operator>x</button>
-            <button class="btn" onclick="sound()" data-operator>÷</button>         
-            
-    
-            
+            <button class="btn" onclick="sound()" id="dot">.</button>  
+            <button class="btn" onclick="sound()" data-operator>÷</button>                 
         </div>
     </div> 
 </div>
 
 <script src="main.js" defer></script>
 <footer>
-    <div class="copyright">Plamen Dimitrov (2023) <a href="https://github.com/TankEngine-ish" target="_blank">GitHub</a> | <a href="https://github.com/TankEngine-ish/Calculator" target="_blank">Source code</a></div>
+    <div class="copyright">Plamen Dimitrov (2023) 
+        <a href="https://github.com/TankEngine-ish" target="_blank">GitHub</a> | <a href="https://github.com/TankEngine-ish/Calculator" target="_blank">Source code</a></div>
   </footer>
 
 </body>

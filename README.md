@@ -19,5 +19,5 @@ I fixed it by providing a min-height property to the error message’s CSS.
 
 Live preview: https://tankengine-ish.github.io/Calculator/ 
 
-Screengrab: 
+
 ![calculator_screenshot](<Images/calculator screenshot.png>)

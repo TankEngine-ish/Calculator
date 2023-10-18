@@ -66,10 +66,11 @@ function appendPoint() {
 //    We need a separate function for the dot because it's the only character other than the operands that gets appended to the current calulation screen.
   
 function deleteNumber() {
-    currentCalc.textContent = currentCalc.textContent
-      .toString()
-      .slice(0, -1)
+    currentCalc.textContent = currentCalc.textContent.toString().slice(0, -1)
   }
+
+// this function converts the current calculation screen to string and with the.slice method it deletes the last integer of it.
+// The key on the interface of the calculator is 'undo'
 
 
 function setOperation(operator) {
@@ -96,6 +97,7 @@ function evaluate() {
     operation = null
   }
   
+  
 
   function roundResult(number) {
     return Math.round(number * 1000) / 1000
@@ -114,8 +116,8 @@ function evaluate() {
   
   function convertOperator(keyboardOperator) {
     if (keyboardOperator === '/') return '÷'
-    if (keyboardOperator === '*') return '×'
-    if (keyboardOperator === '-') return '−'
+    if (keyboardOperator === '*') return 'x'
+    if (keyboardOperator === '-') return '-'
     if (keyboardOperator === '+') return '+'
   }
 
@@ -142,9 +144,9 @@ function evaluate() {
     switch (operator) {
       case '+':
         return add(a, b)
-      case '−':
+      case '-':
         return substract(a, b)
-      case '×':
+      case 'x':
         return multiply(a, b)
       case '÷':
         return divide(a, b)

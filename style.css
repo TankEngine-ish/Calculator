@@ -27,7 +27,6 @@ html {
 background: url(./Images/background.jpg);
 background-size:cover;
 background-repeat:no-repeat;
-position: relative;
 min-height: 100%;
 }
 
@@ -37,12 +36,13 @@ align-items: center;
 justify-content: center;
 height: 75vh;
 margin-top: 50px;
-}
 
+
+}
 
 .display {
 padding: 10px 20px;
-border: 2px var(--border) solid;
+border: 4px var(--border) solid;
 border-radius: 5px;
 margin-bottom: 20px;
 background-color: var(--screen);
@@ -57,16 +57,19 @@ font-family: 'Orbitron', sans-serif;
 }
 
 .calculator {
-  border: 5px var(--border) solid;
-  border-radius: 15px;
+border: 5px var(--border) solid;
+border-radius: 15px;
+border-color:brown;
+padding:15px;
+
 }
 
 #error-message {
 font-family: 'Comfortaa', sans-serif;
 font-weight: 700;
-font-size: 0.8rem;
+font-size: 16px;
 color: rgb(0, 0, 0); /* Set the text color for the error message */
-padding: 5px; /* Add padding to the error message */
+/* padding: 5px; Add padding to the error message */
 display:flex;
 justify-content:center;
 }
@@ -84,21 +87,23 @@ font-size:40px;
 .buttons_layout{
 display: grid;
 grid-template-columns: repeat(5, 1fr);
-grid-gap: 10px;
+grid-gap: 15px;
 }
 
 .btn {
-  padding: 9px;
-  border-radius: 5px;
-  font-size: 25px;
-  font-family: 'Bahiana', sans-serif;
-  font-weight:500;
+padding: 9px;
+border-radius: 7px;
+font-size: 25px;
+font-family: 'Bahiana', sans-serif;
+font-weight:500;
+border-color:brown;
+
 }
 
 .btn:hover {
-  background-color:#99e;
+background-color:#99e;
 }
 
 .span-1 {
-  grid-column: span 3;
+grid-column: span 3;
 }

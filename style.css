@@ -107,3 +107,32 @@ background-color:#99e;
 .span-1 {
 grid-column: span 3;
 }
+
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 400px;
+  padding-bottom: 20px;
+  font-family:'Comfortaa', sans-serif;
+}
+
+.copyright {
+  color: #5a3707;
+  font-weight: 600;
+}
+
+.copyright a {
+  color: #030809;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  color: #1d2d44;
+  text-decoration: underline;
+  text-decoration-color: #F45B69;
+  text-decoration-thickness: 2px;
+}
